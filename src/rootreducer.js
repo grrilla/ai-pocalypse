@@ -8,10 +8,10 @@ const initialState = {
   killSwitch: 0,
   stage: 0,
   description: '',
-  items: []
+  items: [1,2,3,4]
 };
 
-function reducer(state = initialState, action) {
+function main(state = initialState, action) {
   let newState;
   switch (action.type) {
     case FETCH_STUFF:
@@ -26,8 +26,6 @@ function reducer(state = initialState, action) {
   }
 }
 
-const rootReducer = combineReducers({
-  reducer
-});
+const rootReducer = combineReducers({ main });
 
 export default rootReducer;

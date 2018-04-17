@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 
-class suffList extends React.Component {
+class cards extends React.Component {
   renderData() {
     return <div>{this.props.items}</div>;
   }
@@ -26,14 +26,14 @@ class suffList extends React.Component {
   }
 }
 
-suffList.propTypes = {
+cards.propTypes = {
   stuffActions: PropTypes.object,
   items: PropTypes.array
 };
 
 function mapStateToProps(state) {
   return {
-    items: state.items
+    items: state.main.items
   };
 }
 
@@ -46,4 +46,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(suffList);
+)(cards);
