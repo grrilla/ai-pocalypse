@@ -1,31 +1,32 @@
 import { UPDATE_STUFF, RESET_STUFF } from './actionTypes';
 import { combineReducers } from 'redux';
+import STAGES from './api';
 
 const initialState = {
-  image: 1,
-  debt: 0,
-  tension: 0,
+  debt: STAGES[0][0].debt,
+  tension: STAGES[0][0].social,
   killSwitch: 0,
-  stage: 0,
-  description: '',
-  items: [{ num: 1 },{ num: 2 },{ num: 3 },{ num: 4 }]
+  stage: STAGES[0][0].stage,
+  items: STAGES[0]
 };
 
 function main(state = initialState, action) {
+  let returnObj;
   switch (action.type) {
     case UPDATE_STUFF:
-      console.log('UPDATE_STUFF Action')
-      return {
+      returnObj = {
         ...state,
-        image: state.image + (action.image || 0),
         debt: state.debt + (action.debt || 0),
-        tension: state.tension + (action.tension || 0),
+        tension: state.tension + (action.social || 0),
         killSwitch: state.killSwitch + (action.killSwitch || 0),
-        stage: state.stage + (action.stage || 0),
-        description: action.description
+        stage: action.nextStage,
+        items: STAGES[action.nextStage]
       };
+      console.log('UPDATE_STUFF Action', returnObj);
+      return returnObj;
     case RESET_STUFF:
-      console.log('RESET_STUFF Action')
+      returnObj = { ...initialState };
+      console.log('RESET_STUFF Action', returnObj);
       return {...initialState};
     default:
       return state;

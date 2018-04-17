@@ -28,6 +28,14 @@
   display: flex;
 }
 
+.cards {
+  display: flex;
+}
+
+.card img {
+  height: 360px;
+}
+
 .App-header img {
   height: 100px;
 }
