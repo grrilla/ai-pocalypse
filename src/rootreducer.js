@@ -2,10 +2,16 @@ import { FETCH_STUFF, RECEIVE_STUFF } from './actionTypes';
 import { combineReducers } from 'redux';
 
 const initialState = {
-  stuff: []
+  image: 1,
+  debt: 0,
+  tension: 0,
+  killSwitch: 0,
+  stage: 0,
+  description: '',
+  items: []
 };
 
-function reducer(state = initialState.stuff, action) {
+function reducer(state = initialState, action) {
   let newState;
   switch (action.type) {
     case FETCH_STUFF:
@@ -20,7 +26,7 @@ function reducer(state = initialState.stuff, action) {
   }
 }
 
-export const rootReducer = combineReducers({
+const rootReducer = combineReducers({
   reducer
 });
 
