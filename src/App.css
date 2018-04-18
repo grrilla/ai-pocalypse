@@ -26,7 +26,7 @@ a {
   height: 150px;
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .App-title {
@@ -99,4 +99,10 @@ input::-moz-focus-inner {
 .info {
   font-size: 2em;
   padding: 150px 0 0 0;
+}
+
+.reset {
+
+  justify-content: left;
+  width: 10%;
 }

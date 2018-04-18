@@ -18,6 +18,7 @@ class App extends Component {
             <Tension />
             <KillSwitch />
           </div>
+          <div className="reset"></div>
         </header>
         <div className="App-intro">
           <Cards />
