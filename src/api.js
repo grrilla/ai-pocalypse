@@ -138,16 +138,16 @@ export const STAGES = {
       social: 0,
       nextStage: 13,
       debtTolerance: 2,
-      description: ''
+      description: 'DeepMind is the world leader in artificial intelligence research and its application for positive impact. Google bought DeepMind for over $500 million.'
     },
     {
       image: 13,
       debt: 0,
       social: 0,
       kill: 1,
-      nextStage: 13,
+      nextStage: 14,
       debtTolerance: 2,
-      description: ''
+      description: 'Elon Musk invested in DeepMind before Google acquired it in order to make sure the company stayed on track with preventing dangerous Artificial Intelligence.'
     }
   ],
   13: [
@@ -162,13 +162,114 @@ export const STAGES = {
       nextStage: 15
     }
   ],
-  15: [],
-  16: [],
-  17: [],
-  18: [],
-  19: [],
-  20: [],
-  21: [],
-  22: [],
-  23: []
+  15: [
+    {
+      image: 14,
+      debt: 0,
+      social: 0,
+      nextStage: 16,
+      debtTolerance: 2,
+      description: 'Start developing a way to keep AI safe for humanity.'
+    },
+    {
+      image: 15,
+      debt: 0,
+      social: 0,
+      nextStage: '?',
+      debtTolerance: 2,
+      description: 'Start making more helpful and convenient AI for everyone.'
+    }
+  ],
+  16: [
+    {
+      image: 16,
+      debt: 0,
+      social: 0,
+      nextStage: 17,
+      debtTolerance: 2,
+      description: 'Started by Elon Musk, Neuralink aims to create a third layer of the human brain, an electronic one, in order to give humans all the abilities of a smartphone, but without needing a phone. You would have to have the will to broadcast info to people whenever you want, therefore no one can read your mind, and you’d have unlimited internet access.'
+    },
+    {
+      image: 17,
+      debt: 0,
+      social: 0,
+      nextStage: '?',
+      debtTolerance: 2,
+      description: 'Elon Musk wants to advance space travel through SpaceX in order to allow colonization of Mars, with a huge reason being “a bolt-hole if A.I. goes rogue and turns on humanity.”'
+    }
+  ],
+  17: [
+    {
+      image: 18,
+      debt: 0,
+      social: 0,
+      nextStage: 17,
+      debtTolerance: 2,
+      description: 'The first goal of Neuralink is to create a product that helps with severe brain injuries like strokes, cancer lesions, and congenitals by 2021.'
+    },
+    {
+      image: 19,
+      debt: -1,
+      social: 0,
+      nextStage: 18,
+      debtTolerance: 2,
+      description: 'Begin allowing people to pay for and schedule surgeries to have the third layer implanted into their brains.'
+    },
+    {
+      image: 20,
+      debt: 0,
+      social: 1,
+      nextStage: 19,
+      debtTolerance: 2,
+      description: 'Allow people to sign up for a chance to win a free surgery for the new brain layer. This gives lower class citizens a chance to obtain it.'
+    }
+  ],
+  18: [
+    {
+      paragraph: '<p>Remove 1 charge of <span class="debt">Debt</span>.</p>',
+      social: 1,
+      nextStage: 19
+    }
+  ],
+  19: [
+    {
+      paragraph: '<p>Class difference between humans and cyborgs causes job loss, tension, and violence. Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
+      nextStage: 17
+    }
+  ],
+  20: [
+    {
+      image: 20,
+      debt: 0,
+      social: 0,
+      nextStage: 'end1', // if you have 2 debt, go to fail1; else, go to success1.
+      debtTolerance: 2,
+      description: ''
+    }
+  ],
+  21: [
+    {
+      image: 19,
+      debt: 1,
+      social: 1,
+      nextStage: 'end2a', // if you have 2 debt BEFORE applying this debt, go to fail2; else go to stage 22.
+      debtTolerance: 2,
+      description: 'Begin allowing people to pay for and schedule surgeries to have the third layer implanted into their brains.'
+    },
+    {
+      image: 20,
+      debt: 0,
+      social: 1,
+      nextStage: 19,
+      debtTolerance: 2,
+      description: 'Allow people to sign up for a chance to win a free surgery for the new brain layer. This gives lower class citizens a chance to obtain it.'
+    }
+  ],
+  22: [
+    {
+      paragraph: '<p>People die. Research blown. Gain 1 charge of <span class="debt">Debt</span> and 1 charge of <span class="tension">Social Tension</span>.</p>',
+      nextStage: 16
+    }
+  ],
+  23: [],
 };
