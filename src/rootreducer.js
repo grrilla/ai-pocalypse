@@ -1,4 +1,4 @@
-import { FETCH_STUFF, RECEIVE_STUFF } from './actionTypes';
+import { UPDATE_STUFF, RESET_STUFF } from './actionTypes';
 import { combineReducers } from 'redux';
 
 const initialState = {
@@ -8,19 +8,25 @@ const initialState = {
   killSwitch: 0,
   stage: 0,
   description: '',
-  items: [1,2,3,4]
+  items: [{ num: 1 },{ num: 2 },{ num: 3 },{ num: 4 }]
 };
 
 function main(state = initialState, action) {
-  let newState;
   switch (action.type) {
-    case FETCH_STUFF:
-      console.log('FETCH_STUFF Action')
-      return action;
-    case RECEIVE_STUFF:
-      newState = action.stuff;
-      console.log('RECEIVE_STUFF Action')
-      return newState;
+    case UPDATE_STUFF:
+      console.log('UPDATE_STUFF Action')
+      return {
+        ...state,
+        image: state.image + (action.image || 0),
+        debt: state.debt + (action.debt || 0),
+        tension: state.tension + (action.tension || 0),
+        killSwitch: state.killSwitch + (action.killSwitch || 0),
+        stage: state.stage + (action.stage || 0),
+        description: action.description
+      };
+    case RESET_STUFF:
+      console.log('RESET_STUFF Action')
+      return {...initialState};
     default:
       return state;
   }

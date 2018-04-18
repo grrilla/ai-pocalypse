@@ -1,21 +1,9 @@
 import * as types from './actionTypes';
 
-export function receiveStuff(json) {
-  return {type: types.RECEIVE_STUFF, stuff: json.stuff};
+export function updateStuff(updateObj) {
+  return { type: types.UPDATE_STUFF, ...updateObj };
 }
 
-// export function fetchStuff() {
-//   return dispatch => {
-//     return fetch(url(), {
-//       method: 'GET',
-//       mode: 'cors',
-//       credentials: 'include',
-//       headers: {
-//         'x-api-key': apiKey,
-//         'Accept': 'application/json'
-//       }
-//     })
-//     .then(response => response.json())
-//     .then(json => dispatch(receiveStuff(json)));
-//   };
-// }
+export function resetStuff() {
+  return { type: types.RESET_STUFF }
+}
