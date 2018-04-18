@@ -1,4 +1,5 @@
 import React from 'react';
+import img from './resources/img/startOver.png';
 
 export default class reset extends React.Component {
   resetStuff() {
@@ -8,7 +9,9 @@ export default class reset extends React.Component {
   render() {
     return (
       <div className="reset">
-        <button onClick={this.resetStuff}>reset</button>
+        <a href="#" onClick={this.resetStuff}>
+          <img src={img} />
+        </a>
       </div>
     );
   }
