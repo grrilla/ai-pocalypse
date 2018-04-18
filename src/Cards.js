@@ -3,11 +3,16 @@ import { bindActionCreators } from 'redux';
 import * as stuffActions from './actions';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Card from './Card';
 
 
 class cards extends React.Component {
   renderData() {
-    return <div>{this.props.items}</div>;
+    return (
+      <div>
+        {this.props.items.map((item, i) => <Card item={item} key={i} />)}
+      </div>
+    );
   }
 
 
