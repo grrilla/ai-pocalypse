@@ -24,9 +24,9 @@ function main(state = initialState, action) {
       } else if (action.nextStage === 'end1' && state.debt >= 2) {
         // if you have 2 debt, go to fail1; else, go to success1.
         if (state.debt >= 2) {
-          gameOverScreen = 'failure1';
+          gameOverScreen = 'failure2';
         } else {
-          gameOverScreen = 'success1';
+          gameOverScreen = 'success2';
         }
       } else if (action.nextStage === 'end2a') {
         // if you have 2 debt BEFORE applying this debt, go to fail2; else go to stage 22.
@@ -40,7 +40,7 @@ function main(state = initialState, action) {
         if (state.debt >= 2) {
           action.nextStage = 25;
         } else {
-          gameOverScreen = 'success2';
+          gameOverScreen = 'success1';
         }
       } else if (action.nextStage === 'end3') {
         // if killSwitch is at 1 BEFORE applying this killSwitch, go to success3; else, go to failure3.')
