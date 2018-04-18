@@ -1,9 +1,13 @@
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { resetStuff } from './actions';
 import React from 'react';
 import img from './resources/img/startOver.png';
 
-export default class reset extends React.Component {
-  resetStuff() {
+class reset extends React.Component {
+  resetStuff = () => {
     console.log('im clicked 8)');
+    this.props.resetStuff();
   }
 
   render() {
@@ -16,3 +20,14 @@ export default class reset extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    resetStuff: bindActionCreators(resetStuff, dispatch)
+  };
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(reset);
