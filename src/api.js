@@ -1,4 +1,4 @@
-export const STAGES = {
+export default {
   0: [
     {
       image: 1,
@@ -39,7 +39,7 @@ export const STAGES = {
   ],
   3: [
     {
-      paragraph: '<p>Not enough technology. Gain 1 charge of <span>Debt</span>.',
+      description: '<p>Not enough technology. Gain 1 charge of <span>Debt</span>.',
       nextStage: 2
     }
   ],
@@ -55,7 +55,7 @@ export const STAGES = {
   ],
   5: [
     {
-      paragraph: '<p>Failure. AI Winter initiates.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p>Failure. AI Winter initiates.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
       nextStage: 6
     }
   ],
@@ -93,7 +93,7 @@ export const STAGES = {
   ],
   8: [
     {
-      paragraph: '<p>Unsuccessful option.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p>Unsuccessful option.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
       nextStage: 9
     }
   ],
@@ -127,7 +127,7 @@ export const STAGES = {
   ],
   11: [
     {
-      paragraph: '<p>The general public is unhappy with the replacement of jobs.<br/>Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
+      description: '<p>The general public is unhappy with the replacement of jobs.<br/>Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
       nextStage: 12
     }
   ],
@@ -152,13 +152,13 @@ export const STAGES = {
   ],
   13: [
     {
-      paragraph: '<p>Google buys Deep Mind for $500 million.<br/>Remove 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p>Google buys Deep Mind for $500 million.<br/>Remove 1 charge of <span class="debt">Debt</span>.</p>',
       nextStage: 15
     }
   ],
   14: [
     {
-      paragraph: '<p>Start research for a <span class="kill">Kill Switch</span>.</p>',
+      description: '<p>Start research for a <span class="kill">Kill Switch</span>.</p>',
       nextStage: 15
     }
   ],
@@ -226,20 +226,20 @@ export const STAGES = {
   ],
   18: [
     {
-      paragraph: '<p>Remove 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p>Remove 1 charge of <span class="debt">Debt</span>.</p>',
       social: 1,
       nextStage: 19
     }
   ],
   19: [
     {
-      paragraph: '<p>Class difference between humans and cyborgs causes job loss, tension, and violence. Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
+      description: '<p>Class difference between humans and cyborgs causes job loss, tension, and violence. Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
       nextStage: 17
     }
   ],
   20: [
     {
-      image: 20,
+      image: 21,
       debt: 0,
       social: 0,
       nextStage: 'end1', // if you have 2 debt, go to fail1; else, go to success1.
@@ -249,27 +249,56 @@ export const STAGES = {
   ],
   21: [
     {
-      image: 19,
+      image: 22,
       debt: 1,
       social: 1,
       nextStage: 'end2a', // if you have 2 debt BEFORE applying this debt, go to fail2; else go to stage 22.
       debtTolerance: 2,
-      description: 'Begin allowing people to pay for and schedule surgeries to have the third layer implanted into their brains.'
+      description: 'Immediately start sending people and supplies to start the colonization of Mars.'
     },
     {
-      image: 20,
+      image: 23,
       debt: 0,
-      social: 1,
-      nextStage: 19,
+      social: 0,
+      nextStage: 23,
       debtTolerance: 2,
-      description: 'Allow people to sign up for a chance to win a free surgery for the new brain layer. This gives lower class citizens a chance to obtain it.'
+      description: 'Falcon Heavy was designed from the outset to carry humans into space and restores the possibility of flying missions with crew to the Moon or Mars.'
     }
   ],
   22: [
     {
-      paragraph: '<p>People die. Research blown. Gain 1 charge of <span class="debt">Debt</span> and 1 charge of <span class="tension">Social Tension</span>.</p>',
+      description: '<p>People die. Research blown. Gain 1 charge of <span class="debt">Debt</span> and 1 charge of <span class="tension">Social Tension</span>.</p>',
       nextStage: 16
     }
   ],
-  23: [],
+  23: [
+    {
+      image: 24,
+      debt: 0,
+      social: 0,
+      nextStage: 24,
+      debtTolerance: 2,
+      description: 'Develop a “Stage 2” of FalconHeavy and have it make the trip to Mars and back successfully.'
+    }
+  ],
+  24: [
+    {
+      image: 25,
+      debt: 0,
+      social: 0,
+      nextStage: 'end2b', // if you have 2 debt, go to stage 16; else, go to success2.
+      debtTolerance: 2,
+      description: 'Start sending people and supplies to start the colonization of Mars.'
+    }
+  ],
+  25: [
+    {
+      description: '<p>Action failed due to high <span class="debt">Debt</span>. Time to think your investments.</p>',
+      nextStage: 16
+    }
+  ],
+  26: [],
+  27: [],
+  28: [],
+  29: [],
 };
