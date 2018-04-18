@@ -26,7 +26,6 @@ a {
   height: 150px;
   padding: 20px;
   display: flex;
-  justify-content: center;
 }
 
 .App-title {
@@ -39,6 +38,7 @@ a {
 
 .stats {
   display: flex;
+  min-width: 80%;
 }
 
 .stat,.stat-tension,.stat-kill-switch {
@@ -60,6 +60,10 @@ a {
 .card {
   max-width: 29%;
   padding: 100px 10px 0 10px;
+}
+
+.card .description {
+  padding: 0px 20px 0 20px;
 }
 
 .card img {
@@ -96,13 +100,16 @@ input::-moz-focus-inner {
   color: #3a688b;
 }
 
-.info {
+p {
+  font-size: 1.2em;
+}
+
+p.info {
   font-size: 2em;
   padding: 150px 0 0 0;
 }
 
 .reset {
-
   justify-content: left;
-  width: 10%;
+  min-width: 10%;
 }
