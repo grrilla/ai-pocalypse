@@ -296,7 +296,7 @@ export default {
   ],
   25: [
     {
-      description: '<p class="info">Action failed due to high <span class="debt">Debt</span>. Time to think your investments.</p>',
+      description: '<p class="info">Action failed due to high <span class="debt">Debt</span>. Time to rethink your investments.</p>',
       nextStage: 16
     }
   ],

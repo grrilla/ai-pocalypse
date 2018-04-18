@@ -15,11 +15,12 @@ function main(state = initialState, action) {
   let returnObj;
   switch (action.type) {
     case UPDATE_STUFF:
-      let gameOverScreen = null;
+      let gameOverScreen = 'success1';
 
       if (action.tensionCheck && state.tension >= 4) {
         // Game over if you have much tension
         gameOverScreen = 'failure1';
+        action.nextStage = undefined;
       } else if (action.nextStage === 'end1' && state.debt >= 2) {
         // if you have 2 debt, go to fail1; else, go to success1.
         if (state.debt >= 2) {
@@ -37,7 +38,7 @@ function main(state = initialState, action) {
       } else if (action.nextStage === 'end2b') {
         // if you have 2 debt, go to stage 16; else, go to success2.
         if (state.debt >= 2) {
-          action.nextStage = 16;
+          action.nextStage = 25;
         } else {
           gameOverScreen = 'success2';
         }

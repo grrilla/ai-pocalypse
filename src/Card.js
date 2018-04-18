@@ -16,7 +16,7 @@ class card extends React.Component {
   updateStuff = () => {
     console.log('im update 8)');
     if (this.moreDebtThanTolerater()) {
-      alert('sorry u cant :(');
+      // alert('sorry u cant :(');
     } else {
       this.props.updateStuff(this.props.item);
     }
