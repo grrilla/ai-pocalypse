@@ -27,6 +27,7 @@ class killSwitch extends React.Component {
     return (
       <div className="stat-kill-switch">
         <img src={this.state.killSwitchImage} className="stat-image"/>
+        <p>Kill Switch</p>
       </div>
     );
   }

@@ -31,8 +31,7 @@ class card extends React.Component {
       <div className="card">
         <a href="#" onClick={this.updateStuff}>
           <img className={"choice " + className} src={imgs[this.props.item.image]}/>
-          <div dangerouslySetInnerHTML={this.createMarkup()}>
-          </div>
+          <div dangerouslySetInnerHTML={this.createMarkup()} className="description"></div>
         </a>
       </div>
     );

@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 html, body, #root, .App, .cards {
   height: 100%;
 }
 
 .App {
   text-align: center;
-  font-family: Ubuntu;
+  font-family: "Ubuntu", Monaco, monospace;
   background-color: #94C7C8;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -17,7 +25,6 @@ html, body, #root, .App, .cards {
   background-color: #40474E;
   height: 150px;
   padding: 20px;
-  color: white;
   display: flex;
   justify-content: space-around;
 }
@@ -37,10 +44,20 @@ html, body, #root, .App, .cards {
 .cards {
   display: flex;
   max-width: 28%;
+  height: 100vh;
+}
+
+.card {
+  max-width: 30%;
 }
 
 .card img {
   height: 360px;
+  padding: 100px 50px 50px 50px;
+}
+
+.card .description {
+
 }
 
 .App-header img {
