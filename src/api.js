@@ -175,7 +175,7 @@ export default {
       image: 15,
       debt: 0,
       social: 0,
-      nextStage: '?',
+      nextStage: 26,
       debtTolerance: 2,
       description: 'Start making more helpful and convenient AI for everyone.'
     }
@@ -193,7 +193,7 @@ export default {
       image: 17,
       debt: 0,
       social: 0,
-      nextStage: '?',
+      nextStage: 21,
       debtTolerance: 2,
       description: 'Elon Musk wants to advance space travel through SpaceX in order to allow colonization of Mars, with a huge reason being “a bolt-hole if A.I. goes rogue and turns on humanity.”'
     }
@@ -239,7 +239,7 @@ export default {
   ],
   20: [
     {
-      image: 20,
+      image: 21,
       debt: 0,
       social: 0,
       nextStage: 'end1', // if you have 2 debt, go to fail1; else, go to success1.
@@ -249,20 +249,20 @@ export default {
   ],
   21: [
     {
-      image: 19,
+      image: 22,
       debt: 1,
       social: 1,
       nextStage: 'end2a', // if you have 2 debt BEFORE applying this debt, go to fail2; else go to stage 22.
       debtTolerance: 2,
-      description: 'Begin allowing people to pay for and schedule surgeries to have the third layer implanted into their brains.'
+      description: 'Immediately start sending people and supplies to start the colonization of Mars.'
     },
     {
-      image: 20,
+      image: 23,
       debt: 0,
-      social: 1,
-      nextStage: 19,
+      social: 0,
+      nextStage: 23,
       debtTolerance: 2,
-      description: 'Allow people to sign up for a chance to win a free surgery for the new brain layer. This gives lower class citizens a chance to obtain it.'
+      description: 'Falcon Heavy was designed from the outset to carry humans into space and restores the possibility of flying missions with crew to the Moon or Mars.'
     }
   ],
   22: [
@@ -271,5 +271,81 @@ export default {
       nextStage: 16
     }
   ],
-  23: [],
+  23: [
+    {
+      image: 24,
+      debt: 0,
+      social: 0,
+      nextStage: 24,
+      debtTolerance: 2,
+      description: 'Develop a “Stage 2” of FalconHeavy and have it make the trip to Mars and back successfully.'
+    }
+  ],
+  24: [
+    {
+      image: 25,
+      debt: 0,
+      social: 0,
+      nextStage: 'end2b', // if you have 2 debt, go to stage 16; else, go to success2.
+      debtTolerance: 2,
+      description: 'Start sending people and supplies to start the colonization of Mars.'
+    }
+  ],
+  25: [
+    {
+      description: '<p>Action failed due to high <span class="debt">Debt</span>. Time to think your investments.</p>',
+      nextStage: 16
+    }
+  ],
+  26: [
+    {
+      image: 26,
+      debt: 0,
+      social: 0,
+      nextStage: 27,
+      debtTolerance: 2,
+      description: 'Cut back costs by developing AI to allow machines to troubleshoot and repair themselves, removing the need for extra engineers and repairmen.'
+    },
+    {
+      image: 27,
+      debt: 0,
+      social: 0,
+      nextStage: 27,
+      debtTolerance: 2,
+      description: 'Give the United States the upper hand in military might by creating AI that can auto detect threats from other nations, defend against harm, and aim and fire without.'
+    },
+    {
+      image: 28,
+      debt: 0,
+      social: 0,
+      nextStage: 27,
+      debtTolerance: 2,
+      description: 'Develop new AI that can work, move, and learn on their own in order to make the consumers’ lives easier and more streamlined.'
+    }
+  ],
+  27: [
+    {
+      description: '<p>The advancement of AI without limitations has led to hostile machines that threaten humanity.</p>',
+      nextStage: 28
+    }
+  ],
+  28: [
+    {
+      image: 29,
+      debt: 0,
+      social: 0,
+      nextStage: 'failure3',
+      debtTolerance: 2,
+      description: 'This is your line of defense against the apocalypse now. Everyone is scared. Give them a fighting chance.'
+    },
+    {
+      image: 30,
+      debt: 0,
+      social: 0,
+      killSwitch: 1,
+      nextStage: 'end3', // If killSwitch is at 1 BEFORE applying this killSwitch, go to success3; else, go to failure3.
+      debtTolerance: 2,
+      description: 'If you’ve invested in DeepMind in the past, the kill switch research should be done! Develop it and destroy all malicious AI!'
+    }
+  ]
 };
