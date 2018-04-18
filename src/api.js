@@ -128,7 +128,8 @@ export default {
   11: [
     {
       description: '<p>The general public is unhappy with the replacement of jobs.<br/>Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
-      nextStage: 12
+      nextStage: 12,
+      tensionCheck: true
     }
   ],
   12: [
@@ -234,7 +235,8 @@ export default {
   19: [
     {
       description: '<p>Class difference between humans and cyborgs causes job loss, tension, and violence. Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
-      nextStage: 17
+      nextStage: 17,
+      tensionCheck: true
     }
   ],
   20: [
@@ -268,7 +270,8 @@ export default {
   22: [
     {
       description: '<p>People die. Research blown. Gain 1 charge of <span class="debt">Debt</span> and 1 charge of <span class="tension">Social Tension</span>.</p>',
-      nextStage: 16
+      nextStage: 16,
+      tensionCheck: true
     }
   ],
   23: [
