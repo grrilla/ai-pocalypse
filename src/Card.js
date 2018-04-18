@@ -6,6 +6,11 @@ import React from 'react';
 import imgs from './imgs';
 
 class card extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { imgs };
+  }
+
   moreDebtThanTolerater = () => this.props.debt > this.props.item.debtTolerance;
 
   updateStuff = () => {
@@ -17,7 +22,14 @@ class card extends React.Component {
     }
   }
 
+  src = () => {
+    const imgs = this.state.imgs;
+    const img = imgs[this.props.item.image];
+    return img;
+  }
+
   createMarkup = () => {
+    console.log('huh?', this);
     return { __html: this.props.item.description };
   }
 
@@ -30,7 +42,7 @@ class card extends React.Component {
     return (
       <div className="card">
         <a href="#" onClick={this.updateStuff}>
-          <img className={"choice " + className} src={imgs[this.props.item.image]}/>
+          <img className={"choice " + className} src={this.src()}/>
           <div dangerouslySetInnerHTML={this.createMarkup()} className="description"></div>
         </a>
       </div>
