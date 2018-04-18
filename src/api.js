@@ -55,7 +55,7 @@ export const STAGES = {
   ],
   5: [
     {
-      paragraph: '<p>Failure. AI Winter initiates. Gain 1 charge of <span>Debt</span>.',
+      paragraph: '<p>Failure. AI Winter initiates.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
       stage: 1
     }
   ],
@@ -66,12 +66,22 @@ export const STAGES = {
       social: 0,
       stage: 7,
       debtTolerance: 2,
-      description: 'RI was the first successful commercial expert system. It configured orders for new computer systems. After 5 years, it was saving the company about 40 million dollars per year.'
+      description: 'RI was the first successful commercial expert system. It configured orders for new computer systems. After 5 years, it was saving the company about 40 million dollars per year.',
+      bonus: {
+        description: '<p>Invent the Roomba.<br/>Remove 1 charge of <span class="debt">Debt</span>.</p>',
+        debt: -1
+      }
     }
-    // figure out bonus button
   ],
   7: [
-      
+    {
+      image: 7,
+      debt: 1,
+      social: 0,
+      stage: 5,
+      debtTolerance: 2,
+      description: ''
+    }
   ],
   8: [],
   9: [],
