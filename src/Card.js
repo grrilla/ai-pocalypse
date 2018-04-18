@@ -20,7 +20,7 @@ class card extends React.Component {
       <div className="card">
         <a href="#" onClick={this.updateStuff}>
           <img src={imgs[this.props.item.image]} className="choice"/>
-          <div dangerouslySetInnerHTML={this.createMarkup()}></div>
+          <div dangerouslySetInnerHTML={this.createMarkup()} className="description"></div>
         </a>
       </div>
     );
