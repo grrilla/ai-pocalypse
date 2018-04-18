@@ -9,8 +9,6 @@ const initialState = {
   stage: STAGES[0][0].stage,
   items: STAGES[0],
   gameOverScreen: null
-  // items: [],
-  // gameOverScreen: 'failure1'
 };
 
 function main(state = initialState, action) {
@@ -21,7 +19,6 @@ function main(state = initialState, action) {
 
       if (action.tensionCheck && state.tension >= 4) {
         // Game over if you have much tension
-        debugger;
         gameOverScreen = 'failure1';
       } else if (action.nextStage === 'end1' && state.debt >= 2) {
         // if you have 2 debt, go to fail1; else, go to success1.

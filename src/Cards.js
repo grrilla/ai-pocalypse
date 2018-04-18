@@ -4,17 +4,24 @@ import * as stuffActions from './actions';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Card from './Card';
-import failure1 from './resources/img/failure1.png';
-import failure2 from './resources/img/failure2.png';
-import failure3 from './resources/img/failure3.png';
-import success1 from './resources/img/success1.png';
-import success2 from './resources/img/success2.png';
-import success3 from './resources/img/success3.png';
+// import failure1 from './resources/img/failure1.png';
+// import failure2 from './resources/img/failure2.png';
+// import failure3 from './resources/img/failure3.png';
+// import success1 from './resources/img/success1.png';
+// import success2 from './resources/img/success2.png';
+// import success3 from './resources/img/success3.png';
+import imgs from './gameOverImages';
 
 class cards extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { failure1, failure2, failure3, success1, success2, success3 };
+    this.state = imgs;
+  }
+
+  src = () => {
+    const imgs = this.state;
+    const img = imgs[this.props.gameOverScreen];
+    return img;
   }
 
   renderData() {
@@ -33,7 +40,7 @@ class cards extends React.Component {
             this.renderData()
             :
             <div className="game-over">
-              <img scr={this.state[this.props.gameOverScreen]}/>
+              <img src={this.src()} style={{ backgroundImage: `url(${this.src()})` }}/>
             </div>
           }
       </div>
