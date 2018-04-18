@@ -175,7 +175,7 @@ export default {
       image: 15,
       debt: 0,
       social: 0,
-      nextStage: '?',
+      nextStage: 26,
       debtTolerance: 2,
       description: 'Start making more helpful and convenient AI for everyone.'
     }
@@ -193,7 +193,7 @@ export default {
       image: 17,
       debt: 0,
       social: 0,
-      nextStage: '?',
+      nextStage: 21,
       debtTolerance: 2,
       description: 'Elon Musk wants to advance space travel through SpaceX in order to allow colonization of Mars, with a huge reason being “a bolt-hole if A.I. goes rogue and turns on humanity.”'
     }
@@ -297,8 +297,55 @@ export default {
       nextStage: 16
     }
   ],
-  26: [],
-  27: [],
-  28: [],
-  29: [],
+  26: [
+    {
+      image: 26,
+      debt: 0,
+      social: 0,
+      nextStage: 27,
+      debtTolerance: 2,
+      description: 'Cut back costs by developing AI to allow machines to troubleshoot and repair themselves, removing the need for extra engineers and repairmen.'
+    },
+    {
+      image: 27,
+      debt: 0,
+      social: 0,
+      nextStage: 27,
+      debtTolerance: 2,
+      description: 'Give the United States the upper hand in military might by creating AI that can auto detect threats from other nations, defend against harm, and aim and fire without.'
+    },
+    {
+      image: 28,
+      debt: 0,
+      social: 0,
+      nextStage: 27,
+      debtTolerance: 2,
+      description: 'Develop new AI that can work, move, and learn on their own in order to make the consumers’ lives easier and more streamlined.'
+    }
+  ],
+  27: [
+    {
+      description: '<p>The advancement of AI without limitations has led to hostile machines that threaten humanity.</p>',
+      nextStage: 28
+    }
+  ],
+  28: [
+    {
+      image: 29,
+      debt: 0,
+      social: 0,
+      nextStage: 'failure3',
+      debtTolerance: 2,
+      description: 'This is your line of defense against the apocalypse now. Everyone is scared. Give them a fighting chance.'
+    },
+    {
+      image: 30,
+      debt: 0,
+      social: 0,
+      killSwitch: 1,
+      nextStage: 'end3', // If killSwitch is at 1 BEFORE applying this killSwitch, go to success3; else, go to failure3.
+      debtTolerance: 2,
+      description: 'If you’ve invested in DeepMind in the past, the kill switch research should be done! Develop it and destroy all malicious AI!'
+    }
+  ]
 };
