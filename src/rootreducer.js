@@ -16,7 +16,7 @@ function main(state = initialState, action) {
     case UPDATE_STUFF:
       returnObj = {
         ...state,
-        debt: state.debt + (action.debt || 0),
+        debt: Math.min(state.debt + (action.debt || 0), 2),
         tension: state.tension + (action.social || 0),
         killSwitch: state.killSwitch + (action.killSwitch || 0),
         stage: action.nextStage,
