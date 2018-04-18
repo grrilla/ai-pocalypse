@@ -40,7 +40,6 @@ function main(state = initialState, action) {
         if (state.debt >= 2) {
           action.nextStage = 25;
         } else {
-          console.log('AAAAAAAAAAAAAAAAAAAAAAh');
           gameOverScreen = 'success1';
         }
       } else if (action.nextStage === 'end3') {
