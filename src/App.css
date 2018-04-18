@@ -41,23 +41,29 @@ a {
   display: flex;
 }
 
+.stat,.stat-tension,.stat-kill-switch {
+  padding: 0 30px;
+}
+
 .cards {
   display: flex;
-  max-width: 28%;
-  height: 100vh;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  height: 100%;
 }
 
 .card {
-  max-width: 30%;
+  max-width: 29%;
+  padding: 100px 10px 0 10px;
 }
 
 .card img {
   height: 360px;
-  padding: 100px 50px 50px 50px;
-}
-
-.card .description {
-
 }
 
 .App-header img {
@@ -72,4 +78,25 @@ a {
 .gray-out {
   opacity: 0.4;
   filter: alpha(opacity=40);
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+.tension {
+  color: #B152C8;
+}
+
+.debt {
+  color: #D53031;
+}
+
+.kill {
+  color: #3a688b;
+}
+
+.info {
+  font-size: 2em;
+  padding: 150px 0 0 0;
 }

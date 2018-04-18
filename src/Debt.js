@@ -27,6 +27,7 @@ class debt extends React.Component {
     return (
       <div className="stat">
         <img src={this.state.debtImage} className="stat-image"/>
+        <p>Debt</p>
       </div>
     );
   }

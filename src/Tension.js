@@ -35,6 +35,7 @@ class tension extends React.Component {
     return (
       <div className="stat-tension">
         <img src={this.state.socialImage} className="stat-image"/>
+        <p>Social Tension</p>
       </div>
     );
   }

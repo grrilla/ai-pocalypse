@@ -16,6 +16,7 @@ class reset extends React.Component {
         <a href="#" onClick={this.resetStuff}>
           <img src={img} />
         </a>
+        <p>Start Over</p>
       </div>
     );
   }

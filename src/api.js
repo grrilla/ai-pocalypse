@@ -39,7 +39,7 @@ export default {
   ],
   3: [
     {
-      description: '<p>Not enough technology. Gain 1 charge of <span>Debt</span>.',
+      description: '<p class="info">Not enough technology. Gain 1 charge of <span class="debt">Debt</span>.',
       nextStage: 2
     }
   ],
@@ -55,7 +55,7 @@ export default {
   ],
   5: [
     {
-      description: '<p>Failure. AI Winter initiates.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p class="info">Failure. AI Winter initiates.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
       nextStage: 6
     }
   ],
@@ -93,7 +93,7 @@ export default {
   ],
   8: [
     {
-      description: '<p>Unsuccessful option.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p class="info">Unsuccessful option.<br/>Gain 1 charge of <span class="debt">Debt</span>.</p>',
       nextStage: 9
     }
   ],
@@ -127,7 +127,7 @@ export default {
   ],
   11: [
     {
-      description: '<p>The general public is unhappy with the replacement of jobs.<br/>Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
+      description: '<p class="info">The general public is unhappy with the replacement of jobs.<br/>Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
       nextStage: 12,
       tensionCheck: true
     }
@@ -153,13 +153,13 @@ export default {
   ],
   13: [
     {
-      description: '<p>Google buys Deep Mind for $500 million.<br/>Remove 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p class="info">Google buys Deep Mind for $500 million.<br/>Remove 1 charge of <span class="debt">Debt</span>.</p>',
       nextStage: 15
     }
   ],
   14: [
     {
-      description: '<p>Start research for a <span class="kill">Kill Switch</span>.</p>',
+      description: '<p class="info">Start research for a <span class="kill">Kill Switch</span>.</p>',
       nextStage: 15
     }
   ],
@@ -204,7 +204,7 @@ export default {
       image: 18,
       debt: 0,
       social: 0,
-      nextStage: 17,
+      nextStage: 20,
       debtTolerance: 2,
       description: 'The first goal of Neuralink is to create a product that helps with severe brain injuries like strokes, cancer lesions, and congenitals by 2021.'
     },
@@ -227,14 +227,14 @@ export default {
   ],
   18: [
     {
-      description: '<p>Remove 1 charge of <span class="debt">Debt</span>.</p>',
+      description: '<p class="info">Remove 1 charge of <span class="debt">Debt</span>.</p>',
       social: 1,
       nextStage: 19
     }
   ],
   19: [
     {
-      description: '<p>Class difference between humans and cyborgs causes job loss, tension, and violence. Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
+      description: '<p class="info">Class difference between humans and cyborgs causes job loss, tension, and violence. Gain 1 charge of <span class="tension">Social Tension</span>.</p>',
       nextStage: 17,
       tensionCheck: true
     }
@@ -269,7 +269,7 @@ export default {
   ],
   22: [
     {
-      description: '<p>People die. Research blown. Gain 1 charge of <span class="debt">Debt</span> and 1 charge of <span class="tension">Social Tension</span>.</p>',
+      description: '<p class="info">People die. Research blown. Gain 1 charge of <span class="debt">Debt</span> and 1 charge of <span class="tension">Social Tension</span>.</p>',
       nextStage: 16,
       tensionCheck: true
     }
@@ -296,7 +296,7 @@ export default {
   ],
   25: [
     {
-      description: '<p>Action failed due to high <span class="debt">Debt</span>. Time to think your investments.</p>',
+      description: '<p class="info">Action failed due to high <span class="debt">Debt</span>. Time to think your investments.</p>',
       nextStage: 16
     }
   ],
@@ -328,7 +328,7 @@ export default {
   ],
   27: [
     {
-      description: '<p>The advancement of AI without limitations has led to hostile machines that threaten humanity.</p>',
+      description: '<p class="info">The advancement of AI without limitations has led to hostile machines that threaten humanity.</p>',
       nextStage: 28
     }
   ],
