@@ -1,15 +1,43 @@
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { updateStuff } from './actions';
+import PropTypes from 'prop-types';
 import React from 'react';
+import imgs from './imgs';
 
-export default class card extends React.Component {
+class card extends React.Component {
+  updateStuff = () => {
+    console.log('im update 8)');
+    this.props.updateStuff(this.props.item);
+  }
+
+  createMarkup = () => {
+    return { __html: this.props.item.description };
+  }
+
   render() {
     return (
       <div className="card">
-        'Hi' {console.log(this)}
-        <img src='https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350' className="choice"/>
-        <div>
-          {this.props.description}
-        </div>
+        <a href="#" onClick={this.updateStuff}>
+          <img src={imgs[this.props.item.image]} className="choice"/>
+          <div dangerouslySetInnerHTML={this.createMarkup()}></div>
+        </a>
       </div>
     );
   }
 }
+
+card.propTypes = {
+  item: PropTypes.object,
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateStuff: bindActionCreators(updateStuff, dispatch)
+  };
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(card);

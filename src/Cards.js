@@ -9,7 +9,7 @@ import Card from './Card';
 class cards extends React.Component {
   renderData() {
     return (
-      <div>
+      <div className="cards">
         {this.props.items.map((item, i) => <Card item={item} key={i} />)}
       </div>
     );
@@ -18,11 +18,11 @@ class cards extends React.Component {
 
   render() {
     return (
-      <div className="">
+      <div>
           {this.props.items.length > 0 ?
             this.renderData()
             :
-            <div className="">
+            <div>
               No Data
             </div>
           }
