@@ -144,7 +144,7 @@ export default {
       image: 13,
       debt: 0,
       social: 0,
-      kill: 1,
+      killSwitch: 1,
       nextStage: 14,
       debtTolerance: 2,
       description: 'Elon Musk invested in DeepMind before Google acquired it in order to make sure the company stayed on track with preventing dangerous Artificial Intelligence.'
