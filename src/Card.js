@@ -6,9 +6,15 @@ import React from 'react';
 import imgs from './imgs';
 
 class card extends React.Component {
+  moreDebtThanTolerater = () => this.props.debt > this.props.item.debtTolerance;
+
   updateStuff = () => {
     console.log('im update 8)');
-    this.props.updateStuff(this.props.item);
+    if (this.moreDebtThanTolerater()) {
+      alert('sorry u cant :(');
+    } else {
+      this.props.updateStuff(this.props.item);
+    }
   }
 
   createMarkup = () => {
@@ -16,10 +22,15 @@ class card extends React.Component {
   }
 
   render() {
+    let className = '';
+    if (this.moreDebtThanTolerater()) {
+      className = 'gray-out';
+    }
+
     return (
       <div className="card">
         <a href="#" onClick={this.updateStuff}>
-          <img src={imgs[this.props.item.image]} className="choice"/>
+          <img className={"choice " + className} src={imgs[this.props.item.image]}/>
           <div dangerouslySetInnerHTML={this.createMarkup()} className="description"></div>
         </a>
       </div>
@@ -31,6 +42,12 @@ card.propTypes = {
   item: PropTypes.object,
 }
 
+const mapStateToProps = (state) => {
+  return {
+    debt: state.main.debt
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     updateStuff: bindActionCreators(updateStuff, dispatch)
@@ -38,6 +55,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(card);

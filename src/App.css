@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+html, body, #root, .App, .cards {
+  height: 100%;
+}
+
 .App {
   text-align: center;
   font-family: "Ubuntu", Monaco, monospace;
@@ -39,6 +43,7 @@ a {
 
 .cards {
   display: flex;
+  max-width: 28%;
   height: 100vh;
 }
 
@@ -62,4 +67,9 @@ a {
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.gray-out {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
 }
