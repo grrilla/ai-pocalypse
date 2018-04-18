@@ -21,7 +21,7 @@ function main(state = initialState, action) {
         // Game over if you have much tension
         gameOverScreen = 'failure1';
         action.nextStage = undefined;
-      } else if (action.nextStage === 'end1' && state.debt >= 2) {
+      } else if (action.nextStage === 'end1') {
         // if you have 2 debt, go to fail1; else, go to success1.
         if (state.debt >= 2) {
           gameOverScreen = 'failure2';
@@ -40,6 +40,7 @@ function main(state = initialState, action) {
         if (state.debt >= 2) {
           action.nextStage = 25;
         } else {
+          console.log('AAAAAAAAAAAAAAAAAAAAAAh');
           gameOverScreen = 'success1';
         }
       } else if (action.nextStage === 'end3') {
