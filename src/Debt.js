@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import debt1 from './resources/img/debt-2.png';
+import debt3 from './resources/img/debt-2.png';
 import debt2 from './resources/img/debt-1.png';
-import debt3 from './resources/img/debt-off.png';
+import debt1 from './resources/img/debt-off.png';
 
 class debt extends React.Component {
   constructor(props) {

@@ -1,14 +1,41 @@
+import { connect } from 'react-redux';
 import React from 'react';
-import killSwitch1 from './resources/img/killswitch-1.png';
-import killSwitch2 from './resources/img/killswitch-2.png';
-import killSwitch3 from './resources/img/killswitch-off.png';
+import killSwitch2 from './resources/img/killswitch-1.png';
+import killSwitch3 from './resources/img/killswitch-2.png';
+import killSwitch1 from './resources/img/killswitch-off.png';
 
-export default class killSwitch extends React.Component {
+class killSwitch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.killSwitch1 = killSwitch1;
+    this.killSwitch2 = killSwitch2;
+    this.killSwitch3 = killSwitch3;
+    this.state = {killSwitchImage: killSwitch1}
+  }
+
+  componentDidUpdate() {
+    if (this.props.kill === 0 && this.state.killSwitchImage !== this.killSwitch1) {
+      this.setState({ killSwitchImage: this.killSwitch1 });
+    } else if (this.props.kill === 1 && this.state.killSwitchImage !== this.killSwitch2) {
+      this.setState({ killSwitchImage: this.killSwitch2 });
+    } else if (this.props.kill >= 2 && this.state.killSwitchImage !== this.killSwitch3) {
+      this.setState({ killSwitchImage: this.killSwitch3 });
+    }
+  }
+
   render() {
     return (
-      <div className="stat">
-        <img src={killSwitch1} className="stat-image"/>
+      <div className="stat-kill-switch">
+        <img src={this.state.killSwitchImage} className="stat-image"/>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    kill: state.main.killSwitch
+  }
+}
+
+export default connect(mapStateToProps)(killSwitch);
