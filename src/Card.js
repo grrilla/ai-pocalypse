@@ -43,7 +43,7 @@ class card extends React.Component {
       <div className="card">
         <a href="#" onClick={this.updateStuff}>
           <img className={"choice " + className} src={this.src()}/>
-          <div dangerouslySetInnerHTML={this.createMarkup()} className="description"></div>
+          <div dangerouslySetInnerHTML={this.createMarkup()} className={this.src() == undefined ? "changeover" : "description"}></div>
         </a>
       </div>
     );
