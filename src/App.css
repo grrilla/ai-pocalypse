@@ -4,6 +4,14 @@ html, body, #root, .App, .cards {
   height: 100%;
 }
 
+#root div {
+  height: 100%;
+}
+
+.title {
+  background-color: #40474F;
+}
+
 .App {
   text-align: center;
   font-family: "SansSerif", Monaco, monospace;
@@ -74,6 +82,10 @@ a {
 
 .App-header img {
   height: 100px;
+}
+
+.title-img {
+  max-width: 100%;
 }
 
 @keyframes App-logo-spin {
