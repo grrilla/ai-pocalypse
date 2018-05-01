@@ -16,8 +16,11 @@ class App extends Component {
   }
 
   onClick = () => {
-    console.log('click');
-    this.setState({ titleScreen:false });
+    this.setState({ titleScreen: false });
+  }
+
+  setToTitleScreen = () => {
+    this.setState({ titleScreen: true });
   }
 
   render() {
@@ -26,7 +29,7 @@ class App extends Component {
           ) : (
         <div className="App">
           <header className="App-header">
-            <Reset />
+            <Reset setToTitleScreen={this.setToTitleScreen} />
             <div className="stats" style={{'justifyContent':"center"}}>
             <Debt />
             <Tension />
