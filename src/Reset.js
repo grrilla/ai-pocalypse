@@ -5,15 +5,15 @@ import React from 'react';
 import img from './resources/img/startOver.png';
 
 class reset extends React.Component {
-  resetStuff = () => {
-    console.log('im clicked 8)');
+  onClick = () => {
     this.props.resetStuff();
+    this.props.setToTitleScreen();
   }
 
   render() {
     return (
       <div className="reset">
-        <a href="#" onClick={this.resetStuff}>
+        <a href="#" onClick={this.onClick}>
           <img src={img} />
         </a>
         <p>Start Over</p>
