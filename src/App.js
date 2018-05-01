@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {titleScreen:true};
   }
 
-  onClick() {
+  onClick = () => {
     console.log('click');
     this.setState({ titleScreen:false });
   }
@@ -25,9 +25,9 @@ class App extends Component {
         <Title updateStuff={this.onClick} />
           ) : (
         <div className="App">
-            <header className="App-header">
+          <header className="App-header">
             <Reset />
-            <div className="stats" style={{'justify-content':"center"}}>
+            <div className="stats" style={{'justifyContent':"center"}}>
             <Debt />
             <Tension />
             <KillSwitch />
