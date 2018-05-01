@@ -6,7 +6,7 @@ html, body, #root, .App, .cards {
 
 .App {
   text-align: center;
-  font-family: "Ubuntu", Monaco, monospace;
+  font-family: "SansSerif", Monaco, monospace;
   background-color: #94C7C8;
   color: white;
   outline: 0;
@@ -63,7 +63,8 @@ a {
 }
 
 .card .description {
-  padding: 0px 20px 0 20px;
+  padding: 0px 100px 0 160px;
+  text-align: left;
 }
 
 .card img {
