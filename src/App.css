@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=OpenSans');
 
 html, body, #root, .App, .cards {
   height: 100%;
@@ -9,12 +9,15 @@ html, body, #root, .App, .cards {
 }
 
 .title {
-  background-color: #40474F;
+  background-color: #94C7C8;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
 }
 
 .App {
   text-align: center;
-  font-family: "SansSerif", Monaco, monospace;
+  font-family: "OpenSans", Monaco, monospace;
   background-color: #94C7C8;
   color: white;
   outline: 0;
@@ -71,7 +74,7 @@ a {
 }
 
 .card .description {
-  padding: 0px 80px 0 150px;
+  padding: 0px 75px 0 145px;
   text-align: left;
 }
 
@@ -85,7 +88,7 @@ a {
 }
 
 .title-img {
-  max-width: 100%;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {
